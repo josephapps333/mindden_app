@@ -16,16 +16,16 @@ class ProductModel {
 
   factory ProductModel.fromJson(Map<String, dynamic> json) {
     return ProductModel(
-      displayName: json["displayName"] ?? "",
-      type: json["type"] ?? "",
-      description: json["description"] ?? "",
+      displayName: json["displayName"] ?? "none",
+      type: json["type"] ?? "none",
+      description: json["description"] ?? "none",
       fiberUploadMegas: json["fiberUploadMegas"].toString() == "null"
           ? "0"
           : json["fiberUploadMegas"].toString(),
       fiberDownloadMegas: json["fiberDownloadMegas"].toString() == "null"
           ? "0"
           : json["fiberDownloadMegas"].toString(),
-      fiberTechnology: json["fiberTechnology"] ?? "",
+      fiberTechnology: json["fiberTechnology"] ?? "none",
     );
   }
 }//class
